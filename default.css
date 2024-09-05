@@ -1,0 +1,17 @@
+body {
+    background-color: #009890;
+    color: #000000;
+    font-family: Tahoma;
+}
+header, main, footer {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+h1, h2, p, nav {
+    text-align: center;
+}
+
+a {
+    color: #3305ff;
+}
