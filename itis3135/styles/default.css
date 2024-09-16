@@ -28,3 +28,16 @@ figure{
     text-align:center;
     font-style:italic;
 }
+
+.validators {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.validators > a > img {
+    border: 0;
+    width: 88px;
+    height: 31px;
+}
