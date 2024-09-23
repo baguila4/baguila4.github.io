@@ -20,9 +20,7 @@ a:hover {
     color: #3305ff91;
 }
 
-img{
-    width:60%;
-}
+
 
 figure{
     text-align:center;
@@ -33,4 +31,8 @@ footer > a > img {
     border: 0;
     width: 88px;
     height: 31px;
+}
+
+img  {
+    width:50%; 
 }
