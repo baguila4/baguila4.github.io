@@ -36,3 +36,115 @@ footer > a > img {
 img  {
     width:50%; 
 }
+
+/*tables*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+    background-color: #fff; 
+    color: #000000; 
+}
+
+th, td {
+    border: 1px solid #ddd; 
+    padding: 12px;
+}
+
+th {
+    background-color: #005f5f; /* Slightly darker teal*/
+    color: white; 
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Alternating Row Colors */
+tr:nth-child(even) {
+    background-color: #f2f2f2; 
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff; 
+}
+
+
+tr:hover {
+    background-color: #e0e0e0; 
+}
+/*tables*/
+
+
+
+
+
+
+
+
+/* Form Styling */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #009890;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/*forms*/
+label {
+    margin-bottom: 5px;
+    display: block;
+    font-weight: bold;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+
+/* Align buttons vertically */
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+button[type="submit"],
+button[type="reset"] {
+    background-color: #009890;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button[type="submit"]:hover,
+button[type="reset"]:hover {
+    background-color: #007f7f;
+}
+
+@media (max-width: 600px) {
+    form {
+        width: 100%;
+    }
+}
+/*forms*/

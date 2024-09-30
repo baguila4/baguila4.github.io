@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brandon Aguilar's Busy Alpaca || ITIS3135 Forms</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/default.css"> 
+</head>
+
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+    <main>
+        <h2>Contact Alpaca Ballers</h2>
+        <p>Fill out the form below to get in touch with us for more information about our soccer training programs.</p>
+
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number (123-456-7890)" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+            <label>Services you are interested in:</label><br>
+            <input type="checkbox" id="basic" name="services[]" value="Basic Training">
+            <label for="basic">Basic Training</label><br>
+            <input type="checkbox" id="advanced" name="services[]" value="Advanced Training">
+            <label for="advanced">Advanced Training</label><br>
+            <input type="checkbox" id="elite" name="services[]" value="Elite Training">
+            <label for="elite">Elite Training</label><br><br>
+
+            <label>Preferred session time:</label><br>
+            <input type="radio" id="morning" name="session_time" value="morning" required>
+            <label for="morning">Morning</label><br>
+            <input type="radio" id="afternoon" name="session_time" value="afternoon">
+            <label for="afternoon">Afternoon</label><br>
+            <input type="radio" id="evening" name="session_time" value="evening">
+            <label for="evening">Evening</label><br><br>
+
+            <label for="skill">Skill Level:</label>
+            <select id="skill" name="skill">
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+            </select><br><br>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </main>
+    <br>
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script src="scripts/HTMLInclude.min.js"></script>
+
+</body>
+</html>
