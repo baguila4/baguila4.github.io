@@ -1,13 +1,16 @@
+/* Base styles for body and main elements */
 body {
     background-color: #009890;
     color: #000000;
     font-family: Tahoma;
 }
+
 header, main, footer {
     width: 95%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto; /* Centers the content horizontally */
 }
+
 h1, h2, p, nav {
     text-align: center;
 }
@@ -20,11 +23,9 @@ a:hover {
     color: #3305ff91;
 }
 
-
-
-figure{
-    text-align:center;
-    font-style:italic;
+figure {
+    text-align: center;
+    font-style: italic;
 }
 
 footer > a > img {
@@ -33,11 +34,11 @@ footer > a > img {
     height: 31px;
 }
 
-img  {
-    width:50%; 
+img {
+    width: 50%; 
 }
 
-/*tables*/
+/* Table styles */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -54,7 +55,7 @@ th, td {
 }
 
 th {
-    background-color: #005f5f; /* Slightly darker teal*/
+    background-color: #005f5f;
     color: white; 
     text-align: center;
     font-weight: bold;
@@ -69,20 +70,11 @@ tr:nth-child(odd) {
     background-color: #ffffff; 
 }
 
-
 tr:hover {
     background-color: #e0e0e0; 
 }
-/*tables*/
 
-
-
-
-
-
-
-
-/*forms*/
+/* Form styles */
 form {
     background-color: #fff;
     padding: 20px;
@@ -91,7 +83,6 @@ form {
     margin: 0 auto;
 }
 
-/* Input Fields */
 input[type="text"],
 input[type="tel"],
 input[type="email"],
@@ -105,9 +96,6 @@ select {
     font-size: 16px;
 }
 
-
-
-
 label {
     margin-bottom: 5px;
     display: block;
@@ -119,8 +107,6 @@ input[type="radio"] {
     margin-right: 10px;
 }
 
-
-/* Align buttons vertically */
 input[type="checkbox"] + label,
 input[type="radio"] + label {
     display: inline-block;
@@ -145,9 +131,29 @@ button[type="reset"]:hover {
     background-color: #007f7f;
 }
 
+/*Screen Sizes */
+
+/* Large screens and desktops*/
+@media (min-width: 1201px) {
+    main {
+        width: 80%;
+    }
+}
+
+/* Tablets*/
+@media (min-width: 601px) and (max-width: 1200px) {
+    main {
+        width: 90%;
+    }
+}
+
+/* Mobile devices */
 @media (max-width: 600px) {
+    main {
+        width: 95%;
+    }
+
     form {
         width: 100%;
     }
 }
-/* End of forms css*/
