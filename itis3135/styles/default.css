@@ -3,6 +3,7 @@ body {
     background-color: #009890;
     color: #000000;
     font-family: Tahoma;
+    font-size: 20px;
 }
 
 header, main, footer {
