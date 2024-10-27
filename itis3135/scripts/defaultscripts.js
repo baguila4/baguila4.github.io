@@ -3,10 +3,7 @@ function displayDateTime() {
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric' };
     document.getElementById("dateTimeDisplay").innerText = "Today is " + now.toLocaleString('en-US', options);
 }
-window.onload = function() {
-    displayDateTime();
-    updateValidationLinks();
-};
+
 
 function displayUserGreeting() {
     const name = document.getElementById("userName").value;
@@ -24,9 +21,29 @@ function showPolygonName() {
     }
 }
 
-function alpacaFact() { alert("Did you know? Alpacas hum when they're content!"); }
-function alpacaJoke() { alert("What do alpacas say after a joke? Alpaca my bags and leave!"); }
-function alpacaEncouragement() { alert("You got this, from one hard-working alpaca to another!"); }
-function alpacaAdvice() { alert("If things get tough, just graze on and keep moving!"); }
+function alpacaFact() {
+    alert("Did you know? Alpacas hum when they're content!");
+}
 
+function alpacaJoke() {
+    alert("What do alpacas say after a joke? Alpaca my bags and leave!");
+}
 
+function alpacaEncouragement() {
+    alert("You got this, from one hard-working alpaca to another!");
+}
+
+function alpacaAdvice() {
+    alert("If things get tough, just graze on and keep moving!");
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    displayDateTime();
+
+    document.getElementById("submitGreeting").addEventListener("click", displayUserGreeting);
+    document.getElementById("showPolygon").addEventListener("click", showPolygonName);
+    document.getElementById("factButton").addEventListener("click", alpacaFact);
+    document.getElementById("jokeButton").addEventListener("click", alpacaJoke);
+    document.getElementById("encouragementButton").addEventListener("click", alpacaEncouragement);
+    document.getElementById("adviceButton").addEventListener("click", alpacaAdvice);
+});

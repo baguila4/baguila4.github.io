@@ -17,24 +17,24 @@
     <main>
         <h2>First Scripts</h2>
         <h3 id="dateTimeDisplay"></h3>
-        
+
         <form id="userInfoForm">
             <label for="userName">Your Name:</label>
             <input type="text" id="userName">
             <label for="userMood">How are you feeling today?</label>
             <input type="text" id="userMood">
-            <button type="button" onclick="displayUserGreeting()">Submit</button>
+            <button type="button" id="submitGreeting">Submit</button>
         </form>
         <h3 id="userGreeting"></h3>
 
         <label for="favNumber">Enter your favorite number (0-10):</label>
         <input type="number" id="favNumber" min="0" max="10">
-        <button type="button" onclick="showPolygonName()">Show Polygon Name</button>
+        <button type="button" id="showPolygon">Show Polygon Name</button>
 
-        <button onclick="alpacaFact()">Alpaca Fact</button>
-        <button onclick="alpacaJoke()">Alpaca Joke</button>
-        <button onclick="alpacaEncouragement()">Alpaca Encouragement</button>
-        <button onclick="alpacaAdvice()">Alpaca Advice</button>
+        <button id="factButton">Alpaca Fact</button>
+        <button id="jokeButton">Alpaca Joke</button>
+        <button id="encouragementButton">Alpaca Encouragement</button>
+        <button id="adviceButton">Alpaca Advice</button>
     </main>
     <footer>
         <div data-include="components/footer.html"></div>
