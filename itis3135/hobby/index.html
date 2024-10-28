@@ -6,7 +6,6 @@
     <title>Soccer Enthusiast</title>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <style>
-        /* Base and other styling options remain unchanged */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f0f8ff;
@@ -21,13 +20,17 @@
             padding: 20px;
             text-align: center;
         }
+        nav {
+            display: flex; 
+            justify-content: center; 
+            flex-wrap: wrap; 
+        }
         nav a {
             color: #fff;
             background: #6c7ae0;
             padding: 10px 15px;
             border-radius: 4px;
-            margin: 0 10px;
-            display: inline-block; /* Allows for horizontal layout */
+            margin: 5px; /* Adjusted margin for better spacing */
             transition: background-color 0.3s, color 0.3s;
         }
         nav a:hover {
@@ -46,14 +49,16 @@
             background: #2c3e50;
             color: #ffffff;
             text-align: center;
-            padding: 10px 20px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-            left: 0;
-            font-size: 14px;
-            border-top: 2px solid #ffffff;
-        }
+             padding: 10px 20px;
+             position: fixed;
+             width: 100%;
+             bottom: 0;
+             left: 0;
+             font-size: 14px;
+             border-top: 2px solid #ffffff;
+             box-sizing: border-box; 
+            }
+
         footer a {
             color: #ffdd59;
             text-decoration: none;
@@ -62,37 +67,59 @@
             text-decoration: underline;
         }
         img {
-            max-width: 100%;
+            max-width: 50%;
             height: auto;
+            display: block;
+            margin: 0 auto;
         }
         .hidden {
             display: none;
         }
-    
-        /* Responsive adjustments */
         @media (max-width: 600px) {
             nav a {
-                display: block; /* Stack links vertically on small screens */
-                margin: 10px auto; /* Center links */
-                width: 80%; /* Control width to avoid edge-to-edge stretch */
+                flex-basis: 100%; 
             }
             header {
-                padding: 10px 0; /* Reduce padding on smaller screens */
+                padding: 10px 0; 
             }
         }
     </style>
+    
+        <script>
+    function showSection(id) {
+    var sections = document.querySelectorAll("section");
+    sections.forEach((section) => { 
+        section.style.display = "none";
+    });
+    document.getElementById(id).style.display = "block";
+}
+        </script>
+        
 </head>
-<body onload="showSection('what');">
+<body>
     <header>
         <h1>Soccer Enthusiast</h1>
         <nav>
-            <a href="#" onclick="showSection('what');">Home</a>
-            <a href="#" onclick="showSection('who');">About Us</a>
-            <a href="#" onclick="showSection('when');">Schedule</a>
-            <a href="#" onclick="showSection('where');">Locations</a>
-            <a href="#" onclick="showSection('how');">How To Play</a>
-            <a href="#" onclick="showSection('why');">Why Soccer?</a>
+            <a href="#" class="nav-link" data-section="what">Home</a>
+            <a href="#" class="nav-link" data-section="who">About Us</a>
+            <a href="#" class="nav-link" data-section="when">Schedule</a>
+            <a href="#" class="nav-link" data-section="where">Locations</a>
+            <a href="#" class="nav-link" data-section="how">How To Play</a>
+            <a href="#" class="nav-link" data-section="why">Why Soccer?</a>
+            <a href="#" class="nav-link" data-section="ai-prompts">AI Prompts</a>
         </nav>
+        <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll(".nav-link").forEach(link => {
+                link.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    const section = link.getAttribute("data-section");
+                    showSection(section);
+                });
+            });
+        });
+        </script>
+
     </header>
     <main>
         <section id="what">
@@ -103,7 +130,8 @@
         </section>
         <section id="who" class="hidden">
             <h2>About Us</h2>
-            <p>My father is what got me started in soccer. He was a professional player for USA, so there was a lot of expectation for me. Both my sisters went onto become accoplished athletes, with one playing college soccer, and the other winning a marathon at a very young age. I've played Varisty HS, club, ODP, College, and Semi-Professional Soccer. </p>
+            <p>
+                My passion for soccer was ignited by my father, who was a professional player for the USA team, setting high expectations for me from a young age. Both of my sisters also excelled in sports; one played college soccer while the other won a marathon at an impressively young age. My soccer journey includes playing at various competitive levels, including high school varsity, club teams, Olympic Development Programs (ODP), college, and semi-professional leagues.</p>
             <img src="images/38BAB903-DAC8-47F5-A206-A4F4E1C641A7.JPG" alt="US National Team Soccer Player">
             <figcaption>Father in the US National Jersey</figcaption>
         </section>
@@ -127,17 +155,31 @@
         </section>
         <section id="how" class="hidden">
             <h2>How To Play Soccer</h2>
-            <p>Detailed guide on playing soccer for beginners.</p>
-            <img src="images/soccer-how-to.jpg" alt="Playing Soccer">
-            <figcaption>Basics of playing soccer.</figcaption>
+            <p>Playing soccer involves both individual skills and team tactics, but the basic objective is to score more goals than the opponent by getting the ball into their net. A typical soccer match starts with two teams of eleven players each, including a goalkeeper. The game is played on a rectangular field with a goal at each end. Players use their feet, heads, and bodies (but not their hands or arms, except for the goalkeeper within their penalty area) to control and advance the ball. The key skills required include dribbling, passing, shooting, and defending. Players must also understand positioning to effectively support their team and cover opponents. Matches usually consist of two 45-minute halves, with extra time added for stoppages. The rules are overseen by a referee, with assistance from sideline officials. Training often involves drills focusing on techniques, fitness, strategy, and teamwork. Whether playing casually in a local park or competitively in a league, the essentials of soccer revolve around skill development, understanding the rules, and enjoying the spirit of the game.</p>
+            <img src="images/IMG_7494.PNG" alt="Soccer Player Dribbling">
+            <figcaption>Brandon Aguilar dribbling</figcaption>
         </section>
         <section id="why" class="hidden">
             <h2>Why Soccer?</h2>
             <p>The reasons why soccer is the world's most popular sport.</p>
-            <img src="images/soccer-benefits.jpg" alt="Benefits of Soccer">
-            <figcaption>The benefits of playing soccer.</figcaption>
+            <ul>
+                <li>Accessibility and Simplicity: Soccer can be played anywhere with minimal equipment. All you need is a ball and some space to play</li>
+                <li>Global Appeal: Soccer has a universal appeal that transcends national and cultural boundaries. The simplicity of the game and its ability to adapt to any environment help it to be embraced by diverse communities worldwide.</li>
+                <li>Affordability: Unlike many sports, soccer does not require expensive gear or facilities. This makes it accessible to people from all economic backgrounds, which is particularly important in less affluent countries.</li>
+            </ul>
+            <img src="images/cc9df1c0-6018-441f-b2cc-6c407324a872.jpg" alt="Soccer Team playing in the rain">
+            <figcaption>Playing Soccer in the rain.</figcaption>
         </section>
-        <p>Page Built by <a href="brandonadesigns.com/index.html">Brandon A. Designs </a>&copy; 2024, <a href="https://www.freecodecamp.org/certification/baguila4/responsive-web-design"><i>Certified in Responsive Web Design</i></a> </p>
+        <section id="ai-prompts" class="hidden">
+            <h2>AI Prompts</h2>
+            <p>This section details the AI-generated prompts used to create content on this site:</p>
+            <ul>
+                <li><strong>CSS Prompt:</strong> "Use an embedded stylesheet since this is all on one page. Make sure the styling is nice and follows the CRAP principles, No times new roman, generic blue underlined links, no white background, no black text, you get it."</li>
+                <li><strong>JavaScript Prompt:</strong> "Research and find a solution using CSS and/or JavaScript that hides all sections except the one you have clicked."</li>
+            </ul>
+        </section>
+        </main>
+        <p> Page Built by <a href="https://webpages.charlotte.edu/baguila4/itis3135/brandonadesigns.com/index.html">Brandon A. Designs </a>&copy; 2024, <a href="https://www.freecodecamp.org/certification/baguila4/responsive-web-design"><i>Certified in Responsive Web Design</i></a> </p>
         <a href="https://validator.w3.org/check?uri=referer" id="validation-link-html">
             <img class="validator-image" src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML">
           </a>
