@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soccer Enthusiast</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <style>
+        /* Base and other styling options remain unchanged */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        header {
+            background: #1a2e4f;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            background: #6c7ae0;
+            padding: 10px 15px;
+            border-radius: 4px;
+            margin: 0 10px;
+            display: inline-block; /* Allows for horizontal layout */
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background-color: #35495e;
+            color: #ffdd59;
+        }
+        main section {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin: auto;
+            max-width: 800px;
+        }
+        footer {
+            background: #2c3e50;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            font-size: 14px;
+            border-top: 2px solid #ffffff;
+        }
+        footer a {
+            color: #ffdd59;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .hidden {
+            display: none;
+        }
+    
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            nav a {
+                display: block; /* Stack links vertically on small screens */
+                margin: 10px auto; /* Center links */
+                width: 80%; /* Control width to avoid edge-to-edge stretch */
+            }
+            header {
+                padding: 10px 0; /* Reduce padding on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body onload="showSection('what');">
+    <header>
+        <h1>Soccer Enthusiast</h1>
+        <nav>
+            <a href="#" onclick="showSection('what');">Home</a>
+            <a href="#" onclick="showSection('who');">About Us</a>
+            <a href="#" onclick="showSection('when');">Schedule</a>
+            <a href="#" onclick="showSection('where');">Locations</a>
+            <a href="#" onclick="showSection('how');">How To Play</a>
+            <a href="#" onclick="showSection('why');">Why Soccer?</a>
+        </nav>
+    </header>
+    <main>
+        <section id="what">
+            <h2>Welcome to Soccer Enthusiast</h2>
+            <p>Here we talk about the beauty of soccer and my experience with the sport. You do not have to just play soccer to be involved, and that is what is so great about the sport. </p>
+            <img src="images/IMG_7481.JPG" alt="Soccer Game">
+            <figcaption>Niece and friend after a recration soccer match.</figcaption>
+        </section>
+        <section id="who" class="hidden">
+            <h2>About Us</h2>
+            <p>My father is what got me started in soccer. He was a professional player for USA, so there was a lot of expectation for me. Both my sisters went onto become accoplished athletes, with one playing college soccer, and the other winning a marathon at a very young age. I've played Varisty HS, club, ODP, College, and Semi-Professional Soccer. </p>
+            <img src="images/38BAB903-DAC8-47F5-A206-A4F4E1C641A7.JPG" alt="US National Team Soccer Player">
+            <figcaption>Father in the US National Jersey</figcaption>
+        </section>
+        <section id="when" class="hidden">
+            <h2>Soccer Schedule</h2>
+            <p>The best times to watch and play soccer can vary depending on personal preferences and local climate conditions. Generally, soccer matches are popular during the late spring, summer, and early fall when the weather is conducive to playing and watching outdoor sports. In Europe, the soccer season typically runs from August to May with peak viewing times on weekends and weekday evenings to accommodate work schedules. For playing soccer, mornings or late afternoons are ideal as they avoid the peak sun hours, reducing the risk of overheating and dehydration. For spectators, prime times are usually during major tournaments like the FIFA World Cup, UEFA Champions League, and national league games, where matches are often scheduled on weekends or midweek evenings. In regions with harsh winters, indoor leagues offer an alternative, with games played throughout the year. Watching soccer also peaks during these tournaments, with fans tuning in from all over the world at various times depending on their time zone.</p>
+            <img src="images/7a4ec999-30ad-447d-b438-6b44fa43678a.jpg" alt="Indoor Soccer Team Picture">
+            <figcaption>Indoor Soccer</figcaption>
+        </section>
+        <section id="where" class="hidden">
+            <h2>Best Locations</h2>
+            <p>Top places to play or watch soccer.</p>
+            <ul>
+                <li>Barcelona, Spain - Home to Camp Nou, the largest stadium in Europe, and the legendary FC Barcelona. Watching a match here is a pilgrimage for many soccer fans.</li>
+                <li>Buenos Aires, Argentina - Known for its passionate soccer culture. The city is home to historic clubs like Boca Juniors and River Plate, with their iconic stadiums La Bombonera and El Monumental.</li>
+                <li>Milan, Italy - The San Siro Stadium hosts two of Italy's biggest clubs, AC Milan and Inter Milan. It is an iconic venue in European soccer.</li>
+                <li>Manchester, England - Home to Manchester United's Old Trafford and Manchester City's Etihad Stadium, offering top-tier Premier League soccer.</li>
+            </ul>
+            <img src="images/IMG_3992.jpg" alt="Soccer field in Alausi Ecaudor">
+            <figcaption>Team photo in Alausi, Ecuador.</figcaption>
+        </section>
+        <section id="how" class="hidden">
+            <h2>How To Play Soccer</h2>
+            <p>Detailed guide on playing soccer for beginners.</p>
+            <img src="images/soccer-how-to.jpg" alt="Playing Soccer">
+            <figcaption>Basics of playing soccer.</figcaption>
+        </section>
+        <section id="why" class="hidden">
+            <h2>Why Soccer?</h2>
+            <p>The reasons why soccer is the world's most popular sport.</p>
+            <img src="images/soccer-benefits.jpg" alt="Benefits of Soccer">
+            <figcaption>The benefits of playing soccer.</figcaption>
+        </section>
+        <p>Page Built by <a href="brandonadesigns.com/index.html">Brandon A. Designs </a>&copy; 2024, <a href="https://www.freecodecamp.org/certification/baguila4/responsive-web-design"><i>Certified in Responsive Web Design</i></a> </p>
+        <a href="https://validator.w3.org/check?uri=referer" id="validation-link-html">
+            <img class="validator-image" src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML">
+          </a>
+          <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation-link-css">
+            <img class="validator-image" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS">
+          </a>
+</body>
+</html>
