@@ -1,0 +1,162 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Merriweather', serif; 
+    box-sizing: border-box;
+    background: #fffbe7; 
+    color: #5a4a42; 
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background-color: #f2a365; /* Warm orange header */
+    color: #fff;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    text-align: center;
+    margin: 0;
+    padding: 0 20px;
+}
+
+nav#navbar {
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav#navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav#navbar ul li {
+    display: inline;
+    margin-left: 10px;
+}
+
+nav#navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color: #de6b48;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav#navbar ul li a:hover {
+    background-color: #c95d35;
+}
+
+@media (max-width: 768px) {
+    header h1, nav#navbar {
+        float: none;
+        text-align: center;
+    }
+
+    nav#navbar ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    nav#navbar ul li a {
+        display: inline-block;
+        width: 100%;
+    }
+}
+
+h1, h2, h3 {
+    color: #de6b48; 
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: 'Merriweather', serif;
+}
+
+p {
+    line-height: 1.6;
+}
+
+footer {
+    background: #f2a365;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+a {
+    color: #de6b48; 
+    text-decoration: none; 
+    transition: color 0.3s ease-in-out; 
+}
+
+.follow-instagram a {
+    font-size: 18px;
+    font-weight: bold;
+    color: #5a4a42; 
+    margin-right: 10px; 
+}
+
+.follow-instagram a:hover {
+    color: #c95d35; 
+    text-decoration: underline; 
+}
+
+/* Form styling for commission requests */
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type="submit"] {
+    background-color: #de6b48;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: auto;
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: #c95d35;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commissions</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Commissions</h1>
+        <div data-include="components/header.html"></div>
+    </header>
+    <main>
+        <section>
+            <h2>Request a Commission</h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+                
+                <label for="service">Service Type:</label>
+                <select id="service" name="service" required>
+                    <option value="">Select a Service</option>
+                    <option value="painting">Painting</option>
+                    <option value="sculpture">Sculpture</option>
+                    <option value="digital">Digital Art</option>
+                </select><br>
+                
+                <label for="budget">Budget:</label>
+                <select id="budget" name="budget" required>
+                    <option value="">Select Your Budget Range</option>
+                    <option value="20-555">$20 - $55</option>
+                    <option value="75-200">$75 - $200</option>
+                    <option value="2500-500">$250 - $500</option>
+                    <option value="600-1000">$600- $1000</option>
+                    <option value="over-100">$1000+</option>
+                </select><br>
+                
+                <label for="details">Project Details:</label>
+                <textarea id="details" name="details" required></textarea><br>
+                
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script src="scripts/scripts.js"></script>
+    <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>
