@@ -1,12 +1,8 @@
-document.getElementById("introForm").addEventListener("submit", function(event) {
-    event.preventDefault(); 
-    if (validateForm()) {
-        displayResult(); 
-    }
-});
-
 function validateForm() {
-    const requiredFields = ["name", "mascot", "image", "imageCaption", "personalBackground", "professionalBackground", "academicBackground", "webDevBackground", "computerPlatform"];
+    const requiredFields = [
+        "name", "mascot", "image", "image-caption", "personal-background",
+        "professional-background", "academic-background", "web-dev-background", "computer-platform"
+    ];
     for (const field of requiredFields) {
         if (!document.getElementById(field).value) {
             alert("Please fill out all required fields.");
@@ -21,7 +17,7 @@ function validateForm() {
 }
 
 function addCourse() {
-    const container = document.getElementById("coursesContainer");
+    const container = document.getElementById("courses-container");
     const newCourse = document.createElement("div");
     newCourse.classList.add("course-entry"); 
 
@@ -41,22 +37,31 @@ function addCourse() {
     container.appendChild(newCourse);
 }
 
+function resetForm() {
+    document.getElementById("intro-form").reset();
+    document.getElementById("result-container").style.display = "none"; 
+    document.getElementById("courses-container").innerHTML = ''; 
+    addCourse(); 
+}
+
 function displayResult() {
-    const resultContainer = document.getElementById("resultContainer");
-    resultContainer.style.display = "block"; // Show the result container
+    const resultContainer = document.getElementById("result-container");
+    resultContainer.style.display = "block"; 
 
     const name = document.getElementById("name").value;
     const mascot = document.getElementById("mascot").value;
-    const imageCaption = document.getElementById("imageCaption").value;
-    const personalBackground = document.getElementById("personalBackground").value;
-    const professionalBackground = document.getElementById("professionalBackground").value;
-    const academicBackground = document.getElementById("academicBackground").value;
-    const webDevBackground = document.getElementById("webDevBackground").value;
-    const computerPlatform = document.getElementById("computerPlatform").value;
-    const funnyThing = document.getElementById("funnyThing").value;
-    const anythingElse = document.getElementById("anythingElse").value;
+    const imageCaption = document.getElementById("image-caption").value;
+    const personalBackground = document.getElementById("personal-background").value;
+    const professionalBackground = document.getElementById("professional-background").value;
+    const academicBackground = document.getElementById("academic-background").value;
+    const webDevBackground = document.getElementById("web-dev-background").value;
+    const computerPlatform = document.getElementById("computer-platform").value;
+    const funnyThing = document.getElementById("funny-thing").value;
+    const anythingElse = document.getElementById("anything-else").value;
 
-    const courses = Array.from(document.querySelectorAll("#coursesContainer input")).map(input => input.value).filter(value => value);
+    const courses = Array.from(document.querySelectorAll("#courses-container input"))
+        .map((input) => input.value)
+        .filter((value) => value);
 
     resultContainer.innerHTML = `
         <h2>Your Introduction</h2>
@@ -71,14 +76,21 @@ function displayResult() {
             <li><strong>Computer Platform:</strong> ${computerPlatform}</li>
             <li><strong>Funny Thing:</strong> ${funnyThing}</li>
             <li><strong>Anything Else:</strong> ${anythingElse}</li>
-            <li><strong>Courses Currently Taking:</strong> <ul>${courses.map(course => `<li>${course}</li>`).join('')}</ul></li>
+            <li><strong>Courses Currently Taking:</strong> <ul>${courses.map((course) => `<li>${course}</li>`).join('')}</ul></li>
         </ul>
-        <button onclick="resetForm()">Reset</button>
+        <button type="button" id="reset-button">Reset</button>
     `;
+
+    document.getElementById("reset-button").addEventListener("click", resetForm);
 }
 
-function resetForm() {
-    document.getElementById("introForm").reset();
-    document.getElementById("resultContainer").style.display = "none"; // Hide result container
-    document.getElementById("coursesContainer").innerHTML = '<button type="button" onclick="addCourse()">Add Course</button>';
-}
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("intro-form").addEventListener("submit", function (event) {
+        event.preventDefault(); 
+        if (validateForm()) {
+            displayResult(); 
+        }
+    });
+    
+    document.getElementById("add-course-button").addEventListener("click", addCourse);
+});

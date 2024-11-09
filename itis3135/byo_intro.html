@@ -15,25 +15,25 @@
     <h2>BYO Intro</h2>
     <h3>Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
 
-    <form id="introForm" enctype="multipart/form-data">
+    <form id="intro-form" enctype="multipart/form-data">
         <label>Name: <input type="text" id="name" required></label><br>
         <label>Mascot: <input type="text" id="mascot" required></label><br>
         
         <label>Image: <input type="file" id="image" accept=".png, .jpg" required></label><br>
-        <label>Image Caption: <input type="text" id="imageCaption" required></label><br>
+        <label>Image Caption: <input type="text" id="image-caption" required></label><br>
         
-        <label>Personal Background: <textarea id="personalBackground" required></textarea></label><br>
-        <label>Professional Background: <textarea id="professionalBackground" required></textarea></label><br>
-        <label>Academic Background: <textarea id="academicBackground" required></textarea></label><br>
-        <label>Background in Web Development: <textarea id="webDevBackground" required></textarea></label><br>
-        <label>Primary Computer Platform: <input type="text" id="computerPlatform" required></label><br>
+        <label>Personal Background: <textarea id="personal-background" required></textarea></label><br>
+        <label>Professional Background: <textarea id="professional-background" required></textarea></label><br>
+        <label>Academic Background: <textarea id="academic-background" required></textarea></label><br>
+        <label>Background in Web Development: <textarea id="web-dev-background" required></textarea></label><br>
+        <label>Primary Computer Platform: <input type="text" id="computer-platform" required></label><br>
         
-        <label>Funny thing?: <input type="text" id="funnyThing"></label><br>
-        <label>Anything else?: <input type="text" id="anythingElse"></label><br>
+        <label>Funny thing?: <input type="text" id="funny-thing"></label><br>
+        <label>Anything else?: <input type="text" id="anything-else"></label><br>
 
-        <div id="coursesContainer">
+        <div id="courses-container">
             <h4>Courses currently taking:</h4>
-            <button type="button" onclick="addCourse()">Add Course</button>
+            <button type="button" id="add-course-button">Add Course</button>
         </div>
         
         <label>
@@ -45,7 +45,7 @@
         <input type="reset" value="Reset">
     </form>
 
-    <div id="resultContainer" style="display:none;">
+    <div id="result-container" class="hidden">
     </div>
 
     <script src="scripts/survey.js"></script>
