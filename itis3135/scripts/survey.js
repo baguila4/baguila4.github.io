@@ -72,7 +72,7 @@ function displayResult() {
             <ul>
                 <li><strong>Name:</strong> ${name}</li>
                 <li><strong>Mascot:</strong> ${mascot}</li>
-                <li><strong>Image:</strong><br><img src="${e.target.result}" alt="Uploaded Image" style="max-width: 50%; height: auto;"><br>${imageCaption}</li>
+                <li><strong>Image:</strong><br><img src="${e.target.result}" alt="Uploaded Image" style="max-width: 10%; height: auto;"><br>${imageCaption}</li>
                 <li><strong>Personal Background:</strong> ${personalBackground}</li>
                 <li><strong>Professional Background:</strong> ${professionalBackground}</li>
                 <li><strong>Academic Background:</strong> ${academicBackground}</li>
