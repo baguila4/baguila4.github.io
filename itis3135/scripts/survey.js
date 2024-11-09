@@ -63,25 +63,36 @@ function displayResult() {
         .map((input) => input.value)
         .filter((value) => value);
 
-    resultContainer.innerHTML = `
-        <h2>Your Introduction</h2>
-        <ul>
-            <li><strong>Name:</strong> ${name}</li>
-            <li><strong>Mascot:</strong> ${mascot}</li>
-            <li><strong>Image Caption:</strong> ${imageCaption}</li>
-            <li><strong>Personal Background:</strong> ${personalBackground}</li>
-            <li><strong>Professional Background:</strong> ${professionalBackground}</li>
-            <li><strong>Academic Background:</strong> ${academicBackground}</li>
-            <li><strong>Web Development Background:</strong> ${webDevBackground}</li>
-            <li><strong>Computer Platform:</strong> ${computerPlatform}</li>
-            <li><strong>Funny Thing:</strong> ${funnyThing}</li>
-            <li><strong>Anything Else:</strong> ${anythingElse}</li>
-            <li><strong>Courses Currently Taking:</strong> <ul>${courses.map((course) => `<li>${course}</li>`).join('')}</ul></li>
-        </ul>
-        <button type="button" id="reset-button">Reset</button>
-    `;
+    const imageFile = document.getElementById("image").files[0];
+    const reader = new FileReader();
 
-    document.getElementById("reset-button").addEventListener("click", resetForm);
+    reader.onload = function (e) {
+        resultContainer.innerHTML = `
+            <h2>Your Introduction</h2>
+            <ul>
+                <li><strong>Name:</strong> ${name}</li>
+                <li><strong>Mascot:</strong> ${mascot}</li>
+                <li><strong>Image:</strong><br><img src="${e.target.result}" alt="Uploaded Image" style="max-width: 50%; height: auto;"><br>${imageCaption}</li>
+                <li><strong>Personal Background:</strong> ${personalBackground}</li>
+                <li><strong>Professional Background:</strong> ${professionalBackground}</li>
+                <li><strong>Academic Background:</strong> ${academicBackground}</li>
+                <li><strong>Web Development Background:</strong> ${webDevBackground}</li>
+                <li><strong>Computer Platform:</strong> ${computerPlatform}</li>
+                <li><strong>Funny Thing:</strong> ${funnyThing}</li>
+                <li><strong>Anything Else:</strong> ${anythingElse}</li>
+                <li><strong>Courses Currently Taking:</strong> <ul>${courses.map((course) => `<li>${course}</li>`).join('')}</ul></li>
+            </ul>
+            <button type="button" id="reset-button">Reset</button>
+        `;
+
+        document.getElementById("reset-button").addEventListener("click", resetForm);
+    };
+
+    if (imageFile) {
+        reader.readAsDataURL(imageFile);
+    } else {
+        resultContainer.innerHTML = `<p>No image uploaded.</p>`;
+    }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
