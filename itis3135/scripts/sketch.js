@@ -17,12 +17,18 @@ let ballSpeedX = 0;
 let ballSpeedY = 0;
 let ballSize = 10;
 
+// Reset ball to center of canvas with random speed
+function resetBall() {
+  ballPosX = width / 2;
+  ballPosY = height / 2;
+  ballSpeedX = random([-3, 3]);
+  ballSpeedY = random([-1, 1]);
+}
+
 function setup() {
   createCanvas(400, 400);
 
   // Draw rectangles from their center
-  // This makes it easier to check whether the ball is above or below the
-  // center of a paddle
   rectMode(CENTER);
   fill(255);
   noStroke();
@@ -34,6 +40,13 @@ function setup() {
   describe(
     'Two narrow white rectangles and a white square representing the paddles and ball in a game of ping pong. The player scores are displayed in the upper corners, and initially text reads "Click to start"'
   );
+
+  // Add an event listener to prevent default scrolling on arrow keys
+  window.addEventListener("keydown", function (event) {
+    if (event.key === "ArrowUp" || event.key === "ArrowDown") {
+      event.preventDefault();
+    }
+  });
 }
 
 function draw() {
@@ -158,14 +171,6 @@ function draw() {
   if (isLooping() === false) {
     text('Click to start', width / 2, height / 2 - 20);
   }
-}
-
-// Reset ball to center of canvas with random speed
-function resetBall() {
-  ballPosX = width / 2;
-  ballPosY = height / 2;
-  ballSpeedX = random([-3, 3]);
-  ballSpeedY = random([-1, 1]);
 }
 
 function mousePressed() {
