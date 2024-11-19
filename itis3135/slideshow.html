@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brandon Aguilar's Busy Alpaca || ITIS3135 Home</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/default.css"> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts/slideshow.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+    <main>
+        <h2>Slideshow of Items in My Name</h2>
+        <div id="slideshow">
+            <img src="images/An_image_of_a_small_sailboat_gliding_across_a_calm.jpg" alt="Boat" data-caption="B - for Boat" class="visible">
+            <img src="images/A_close-up_image_of_a_red_rose_with_dew_on_its_pet.jpg" alt="Apple" data-caption="R - for Rose">
+            <img src="images/A_vibrant,_red_apple_resting_on_a_white_table_with.jpg" alt="Rose" data-caption="A - for Apple">
+            <img src="images/A_delicate_gold_necklace_with_a_small_diamond_pend.jpg" alt="Necklace" data-caption="N - for Necklace">
+            <img src="images/A_cheerful_golden_retriever_sitting_on_a_grassy_fi.jpg" alt="Dog" data-caption="D - for Dog">
+            <img src="images/A_bright,_freshly_cut_orange,_segments_slightly_se.jpg" alt="Orange" data-caption="O - for Orange">
+            <img src="images/A_panoramic_view_of_the_night_sky_filled_with_star.jpg" alt="Night Sky" data-caption="N - for Night Sky">
+        </div>
+        <div class="caption">B - for Boat</div>
+        <div class="controls">
+            <button id="prev">Previous</button>
+            <button id="next">Next</button>
+        </div>
+        <div class="nav">
+            <button data-index="0">B</button>
+            <button data-index="1">R</button>
+            <button data-index="2">A</button>
+            <button data-index="3">N</button>
+            <button data-index="4">D</button>
+            <button data-index="5">O</button>
+            <button data-index="6">N</button>
+        </div>
+        <h3>AI Prompts Used</h3>
+        <ul>
+            <li>My name is Brandon. Create the 7 images I need for my name.</li>
+        </ul>
+
+        <p>Images generated using DALL-E. Prompt listed above.</p>
+    </main>
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>
