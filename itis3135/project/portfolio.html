@@ -18,62 +18,82 @@
             <p>Here you can view a selection of our past projects and artworks.</p>
             <div class="gallery">
                 <!-- Art Piece 1 -->
-                <article class="flip-container">
+                <article class="flip-container" data-art-id="1">
                     <div class="flipper">
                         <div class="front">
-                            <img src="images/art-piece-1.jpg" alt="Art Piece 1">
+                            <img src="images/1.jpeg" alt="Art Piece 1">
                         </div>
                         <div class="back">
                             <h3>Art Piece 1</h3>
                             <p>Description of Art Piece 1...</p>
+                            <div class="more-info" style="display: none;">
+                                <p>More details about Art Piece 1...</p>
+                            </div>
+                            <button class="toggle-info">Show More</button>
                         </div>
                     </div>
                 </article>
                 <!-- Art Piece 2 -->
-                <article class="flip-container">
+                <article class="flip-container" data-art-id="2">
                     <div class="flipper">
                         <div class="front">
-                            <img src="images/art-piece-2.jpg" alt="Art Piece 2">
+                            <img src="images/2.jpeg" alt="Art Piece 2">
                         </div>
                         <div class="back">
                             <h3>Art Piece 2</h3>
                             <p>Description of Art Piece 2...</p>
+                            <div class="more-info" style="display: none;">
+                                <p>More details about Art Piece 2...</p>
+                            </div>
+                            <button class="toggle-info">Show More</button>
                         </div>
                     </div>
                 </article>
                 <!-- Art Piece 3 -->
-                <article class="flip-container">
+                <article class="flip-container" data-art-id="3">
                     <div class="flipper">
                         <div class="front">
-                            <img src="images/art-piece-3.jpg" alt="Art Piece 3">
+                            <img src="images/3.jpeg" alt="Art Piece 3">
                         </div>
                         <div class="back">
                             <h3>Art Piece 3</h3>
                             <p>Description of Art Piece 3...</p>
+                            <div class="more-info" style="display: none;">
+                                <p>More details about Art Piece 3...</p>
+                            </div>
+                            <button class="toggle-info">Show More</button>
                         </div>
                     </div>
                 </article>
                 <!-- Art Piece 4 -->
-                <article class="flip-container">
+                <article class="flip-container" data-art-id="4">
                     <div class="flipper">
                         <div class="front">
-                            <img src="images/art-piece-4.jpg" alt="Art Piece 4">
+                            <img src="images/5.jpeg" alt="Art Piece 4">
                         </div>
                         <div class="back">
                             <h3>Art Piece 4</h3>
                             <p>Description of Art Piece 4...</p>
+                            <div class="more-info" style="display: none;">
+                                <p>More details about Art Piece 4...</p>
+                            </div>
+                            <button class="toggle-info">Show More</button>
                         </div>
                     </div>
                 </article>
                 <!-- Art Piece 5 -->
-                <article class="flip-container">
+                <article class="flip-container" data-art-id="5">
                     <div class="flipper">
                         <div class="front">
-                            <img src="images/art-piece-5.jpg" alt="Art Piece 5">
+                            <img src="images/8.jpeg" alt="Art Piece 5">
                         </div>
                         <div class="back">
                             <h3>Art Piece 5</h3>
                             <p>Description of Art Piece 5...</p>
+                            <div class="more-info" style="display: none;">
+                                <p>More details about Art Piece 5...</p>
+                            </div>
+                            <button class="toggle-info">Show More</button>
                         </div>
                     </div>
                 </article>
@@ -85,5 +105,10 @@
     </footer>
     <script src="scripts/scripts.js"></script>
     <script src="scripts/HTMLInclude.min.js"></script>
+    <script src="scripts/dynamic.js"></script>
+    <script src="scripts/scroll.js"></script>
+    <button id="scrollToTopBtn" style="display: none; position: fixed; bottom: 20px; right: 20px;">Top</button>
+
+
 </body>
 </html>
